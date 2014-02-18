@@ -8,7 +8,7 @@ int stop=0;
 static void daemon();
 CURL *curl;
 CURLcode res;
-	
+
 size_t write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
 	size_t written;
 	written = fwrite(ptr, size, nmemb, stream);
@@ -25,7 +25,7 @@ void * curl_thread(){
 	char dom[3];
 	char hrs[3];
 	char secs[3];
-	snprintf(mth, 10, "%d", month);
+	sprintf(mth, "%d", month);
 	sprintf(dom, "%d", mday);
 	sprintf(hrs, "%d", hour);
 	sprintf(mi, "%d", min);
