@@ -57,7 +57,7 @@ void * curl_thread(){
         curl = curl_easy_init();
         if(curl) {
                 fp = fopen(outfilename,"wb");
-                curl_easy_setopt(curl, CURLOPT_URL, "http://streamserver:8000/easyfm_64.mp3");
+                curl_easy_setopt(curl, CURLOPT_URL, "http://streamserver:8000/file.mp3");
                 curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
                 curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
                 curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
